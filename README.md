@@ -20,4 +20,14 @@ alert(Message: "Hello World", completion: { print("Hellow word has shown to user
 **showQuestion**
 It has 5 argument message: that to be shown to user, Ok Button Text, Cancel Button Text, Action to perform after Ok is pressed, Action to perform after Cancel is pressed.
 
-*Example 3:*
+*Example 1:*
+
+showQuestion(Message: "Do you want to quit?", OKLabel: "Yes", CancelLabel: "No", OkAction: {
+            fatalError()
+        })
+
+*Example 2:*
+
+showQuestion(Message: "Do you want to quit?", OKLabel: "Yes", CancelLabel: "No", OkAction: {
+            fatalError()
+        },CancelAction: {print("No pressed")})
